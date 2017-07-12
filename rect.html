@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>rectangle</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+	</script>
+</head>
+<body style="margin-left: 50px">
+	<button  onclick="agrandir()" id="bouton1">Agrandir</button>
+	<button  onclick ="rouge()" class="bouton2">Rougir</button>
+	<button class="bouton3">Naturel</button>
+	<button class="bouton4">Disparition</button>
+	<button class="bouton5">Apparition</button>
+	<br>
+	<br>
+
+
+	<canvas id="canvas" width="300px" height="300px" style="border: 1px solid"  >
+	</canvas>
+	<script type="text/javascript">
+
+		let moncanvas= document.getElementById("canvas");
+		let ctx = moncanvas.getContext('2d');
+		let hauteurI = 100;
+		let couleurI = ctx.fillStyle = "lime";
+
+		ctx.fillStyle = "lime";
+		ctx.fillRect(100,100,100,hauteurI);
+		
+		let disparait = ctx.fillRect(0,0,0,0);
+		
+		function agrandir(){
+
+			ctx.fillStyle = "lime";
+			ctx.fillRect(100,100,100,hauteurI+10);
+
+		};
+		let hauteur = hauteurI;
+		function rouge() {
+			
+			ctx.fillStyle = "red";
+			ctx.fillRect(100,100,100,hauteur);
+		}
+
+	</script>
+
+</body>
+</html>

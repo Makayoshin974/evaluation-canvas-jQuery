@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>evaluationJQUERY</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+	</script>
+</head>
+<body>
+<p id="madate">
+	bla
+</p>
+
+	
+	<script type="text/javascript">
+		let jours = new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+		let mois = new Array("janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre");
+		let ladate = new Date();
+		let affiche = jours[ladate.getDay()] +" " + ladate.getDate() + " " + mois[ladate.getMonth()] + " " + ladate.getFullYear();
+		let message ="Bienvenue , nous sommes le " + affiche;
+		console.log(message);
+		 let mes = document.getElementById('madate').innerHTML = message;
+		 
+	
+
+		
+	</script>
+
+</body>
+</html>
